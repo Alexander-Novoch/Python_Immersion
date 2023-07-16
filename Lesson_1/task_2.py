@@ -3,8 +3,8 @@
 # Сделайте ограничение на ввод отрицательных чисел и чисел больше 100 тысяч.
 
 MAX_LIMIT = 100000
-SIMPLE = 1
-COMPOSITE = 2
+SIMPLE = 2
+COMPOSITE = 1
 a = int(input("Введите число от 1 до 100000: "))
 
 x = 0
@@ -13,12 +13,12 @@ if a <= 0 or a > MAX_LIMIT:
 else:
     for i in range(2, a):
         if a % i == 0:
-            x = SIMPLE
+            x = COMPOSITE
             break
         else:
-            x = COMPOSITE
+            x = SIMPLE
 
-if x == SIMPLE:
+if x == COMPOSITE:
     print("Это составное число")
-elif x == COMPOSITE:
+elif x == SIMPLE:
     print("Это простое число")
