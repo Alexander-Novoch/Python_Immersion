@@ -9,7 +9,7 @@ if a <= 0 or a > 100000:
     print("Введите другое число")
 else:
     for i in range(2, a):
-        if a % i == 0 and i != a:
+        if a % i == 0:
             x = 1
             break
         else:
