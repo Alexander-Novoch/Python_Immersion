@@ -28,14 +28,12 @@ def directory_to_files_recurs(path_directory: str) -> None:
 
     with open('Sem_8.json', 'w', encoding='utf-8') as json_file:
         json.dump(dir_dict, json_file, indent=2, ensure_ascii=False)
-    print(dir_dict)
+    # print(dir_dict)
 
-    # dir_dict_to_csv = list[dir_dict]
-    # print(dir_dict_to_csv)
     # with open('Sem8.csv', 'w', encoding='utf-8', newline='') as csv_file:
     #     csv_dict = csv.DictWriter(csv_file, fieldnames=['Path', 'Content'], dialect='excel-tab')
     #     csv_dict.writeheader()
-    #     csv_dict.writerows(dir_dict_to_csv)
+    #     csv_dict.writerows(dir_dict)
 
     with open('Sem_8.json', 'r', encoding='utf_8') as json_file_reed:
         data = json.load(json_file_reed)
@@ -67,5 +65,6 @@ def get_size(start_path: str):
     return total_size
 
 
-print(get_size('.'), 'byte')
-directory_to_files_recurs('C:\\Users\\Xander\\Desktop\\Обучение\\Immersion in Python\\Homework\\lesson_8')
+if __name__ == '__main__':
+    print(get_size('.'), 'byte')
+    directory_to_files_recurs('C:\\Users\\Xander\\Desktop\\Обучение\\Immersion in Python\\Homework\\lesson_8')
