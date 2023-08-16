@@ -17,9 +17,11 @@ class Factory:
     def __init__(self):
         pass
 
-    def build_animal(self, type_animal: TypeAnimal, name: str, color: str, size: float, *args):
+    def build_animal(self, type_animal: TypeAnimal, name: str, color: str, size: float, *args) -> TypeAnimal:
         return f'type - {type_animal}, name - {name}, color - {color}, size - {size}, unique - {str(*args)}'
         # return [{type_animal: [name, color, size, *args]}]
+        # animal = type_animal.value(name, color, size, *args)
+        # return animal
 
 
 if __name__ == '__main__':
